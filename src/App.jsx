@@ -1,15 +1,76 @@
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import Header from './Components/Header.jsx'
 import './App.css'
 
 import HatventureHero from '/assets/projects/hatventure_herocapsule.jpg'
 
+// Lists
+const sectionsList = [
+  {
+    id: 'home',
+    name: 'Inicio',
+    icon: 'bi-house',
+  },
+  {
+    id: 'about',
+    name: 'Sobre Mí',
+    icon: 'bi-person-badge',
+  },
+  {
+    id: 'resume',
+    name: 'Currículum',
+    icon: 'bi bi-file-earmark',
+  },
+  {
+    id: 'projects',
+    name: 'Proyectos',
+    icon: 'bi bi-columns-gap',
+  },
+];
+
+// App
 function App() {
+  const [sections, setSections] = useState(sectionsList);
+  const [currentSection, setCurrentSection] = useState(0);
+  const sectionRefs = useRef(null);
+
+  function getSectionRefs() {
+    if (!sectionRefs.current) {
+      sectionRefs.current = new Map();
+    }
+
+    return sectionRefs.current;
+  }
+
+  function setSectionRef(id, node) {
+    const refsMap = getSectionRefs();
+    if (node) {
+      refsMap.set(id, node);
+    } else {
+      refsMap.delete(id);
+    }
+  }
+
+  useEffect(() => {
+      const onScroll = () => {
+        const refsMap = getSectionRefs();
+        sections.map((section, index) => {
+          if (refsMap.get(section.id).getBoundingClientRect().top <= 200) {
+            setCurrentSection(index);
+          }
+        });
+      };
+      // clean up code
+      window.removeEventListener('scroll', onScroll);
+      window.addEventListener('scroll', onScroll, { passive: true });
+      return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
   return (
     <>
-      <Header />
+      <Header sectionsList={sections} currentSection={currentSection} />
       {/* ======= Hero Section ======= */}
-      <section id="hero" className="d-flex flex-column justify-content-center align-items-center">
+      <section ref={(node) => setSectionRef(sections[0].id, node)} id={sections[0].id} className="d-flex flex-column justify-content-center align-items-center">
         <div className="hero-container">
           <h1>Alejandro <br/> Guerrero Martínez</h1>
           <p><span>Videogame Developer</span></p>
@@ -18,7 +79,7 @@ function App() {
 
       <main id="main">
         {/* ======= About Section ======= */}
-        <section id="about" className="about">
+        <section ref={(node) => setSectionRef(sections[1].id, node)} id={sections[1].id} className="">
           <div className="container">
 
             <div className="section-title">
@@ -41,7 +102,7 @@ function App() {
                     <ul>
                       <li><i className="bi bi-chevron-right"></i> <strong>Fecha de nacimiento:</strong> <span>26 June 1995</span></li>
                       <li><i className="bi bi-chevron-right"></i> <strong>Ciudad:</strong> <span>Valencia, Valencia, Spain</span></li>
-                      <li><i className="bi bi-chevron-right"></i> <strong>Puesto actual:</strong> <span>Desarrollador en <a href="https://www.bravezebra.com/" target="_blank" rel="noopener noreferrer">BraveZebra</a></span></li>
+                      <li><i className="bi bi-chevron-right"></i> <strong>Actualmente:</strong> <span>Desarrollador en <a href="https://www.bravezebra.com/" target="_blank" rel="noopener noreferrer">BraveZebra</a></span></li>
                     </ul>
                   </div>
                   <div className="col-lg-6">
@@ -63,13 +124,10 @@ function App() {
         </section>{/* End About Section */}
 
         {/* ======= Skills Section ======= */}
-        <section id="skills" className="skills section-bg">
+        <section id="skills" className="section-bg">
           <div className="container">
 
-            <div className="section-title">
-              <h2>Conocimientos</h2>
-              <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-            </div>
+            <h3 className="mt-4 mb-4">Conocimientos Avanzados:</h3>
 
             <div className="row skills-content">
 
@@ -85,15 +143,21 @@ function App() {
                 </div>
               </div>
 
+            </div>
+
+            <h3 className="mt-4 mb-4">Conocimientos Medios:</h3>
+
+            <div className="row skills-content">
+
               <div className="col-lg-4 col-sm-6">
                 <div className="progress">
-                  <span className="skill">C++</span>
+                  <span className="skill">Git</span>
                 </div>
               </div>
 
               <div className="col-lg-4 col-sm-6">
                 <div className="progress">
-                  <span className="skill">Git</span>
+                  <span className="skill">C++</span>
                 </div>
               </div>
 
@@ -105,13 +169,25 @@ function App() {
 
               <div className="col-lg-4 col-sm-6">
                 <div className="progress">
-                  <span className="skill">PHP/HTML/CSS</span>
+                  <span className="skill">PHP</span>
+                </div>
+              </div>
+
+              <div className="col-lg-4 col-sm-6">
+                <div className="progress">
+                  <span className="skill">MySQL</span>
+                </div>
+              </div>
+
+              <div className="col-lg-4 col-sm-6">
+                <div className="progress">
+                  <span className="skill">HTML/CSS</span>
                 </div>
               </div>
 
             </div>
 
-            <h3 className="mt-4 mb-4">Conocimientos básicos:</h3>
+            <h3 className="mt-4 mb-4">Conocimientos Básicos:</h3>
 
             <div className="row skills-content">
 
@@ -157,7 +233,7 @@ function App() {
         </section>{/* End Skills Section */}
 
         {/* ======= Resume Section ======= */}
-        <section id="resume" className="resume">
+        <section ref={(node) => setSectionRef(sections[2].id, node)} id={sections[2].id} className="">
           <div className="container">
 
             <div className="section-title">
@@ -221,8 +297,8 @@ function App() {
           </div>
         </section>{/* End Resume Section */}
 
-        {/*<!-- ======= Services Section ======= -->*/}
-        <section id="projects" className="projects section-bg">
+        {/*<!-- ======= Projects Section ======= -->*/}
+        <section ref={(node) => setSectionRef(sections[3].id, node)} id={sections[3].id} className="section-bg">
           <div className="container">
 
             <div className="section-title">
@@ -258,6 +334,14 @@ function App() {
                 <p className="related"><em>Gone Mad Studios</em></p>
                 <p className="description">Pulido del juego y bug-fixing en la parte final del desarrollo y en el port a Nintendo Switch.</p>
               </div>
+
+              <div className="col-lg-6 col-md-12 icon-box">
+                <div className="icon-hero me-3"><img className="img-fluid" loading="lazy" src="https://cdn.cloudflare.steamstatic.com/steam/apps/1051690/hero_capsule.jpg"/></div>
+                <h4 className="title"><a href="https://store.steampowered.com/app/1051690/Nightmare_Reaper/" target="_blank" rel="noopener noreferrer">Nightmare Reaper</a></h4>
+                <p className="related"><em>Brave Zebra</em></p>
+                <p className="description">Desarrollador Auxiliar de Porting: Integración de requerimientos de Xbox(GDK).</p>
+              </div>
+
 
 
             </div>
@@ -366,13 +450,13 @@ function App() {
             <div className="row">
 
               <div className="col-lg-6 col-md-12 icon-box">
-                <div className="icon me-3"><i class="bi bi-github"></i></div>
+                <div className="icon me-3"><i className="bi bi-github"></i></div>
                 <h4 className="title"><a href="https://github.com/AGM-GR/EdgeDetection" target="_blank" rel="noopener noreferrer">Edge Detection</a></h4>
                 <p className="description">Adaptación del efecto de Unity: "Edge Detect Normals" a Post Processing Stack v2, añadiendo nuevas características y mejoras.</p>
               </div>
 
               <div className="col-lg-6 col-md-12 icon-box">
-                <div className="icon me-3"><i class="bi bi-github"></i></div>
+                <div className="icon me-3"><i className="bi bi-github"></i></div>
                 <h4 className="title"><a href="https://github.com/AGM-GR/In-Game" target="_blank" rel="noopener noreferrer">In-Game</a></h4>
                 <p className="description">Projecto fin de master. Videjuego escape room para VR (Microsoft Mixed Reality) hecho en Unity.</p>
               </div>

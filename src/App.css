@@ -41,16 +41,16 @@ a:hover {
 }
 
 /*--------------------------------------------------------------
-# Hero Section
+# Home Section
 --------------------------------------------------------------*/
-#hero {
+#home {
   width: 100%;
   height: 100vh;
   background: url("../img/hero-bg.jpg") top center;
   background-size: cover;
 }
 
-#hero:before {
+#home:before {
   content: "";
   background: rgba(5, 13, 24, 0.3);
   position: absolute;
@@ -61,13 +61,13 @@ a:hover {
   z-index: 1;
 }
 
-#hero .hero-container {
+#home .hero-container {
   position: relative;
   z-index: 2;
   min-width: 300px;
 }
 
-#hero h1 {
+#home h1 {
   margin: 0 0 10px 0;
   font-size: 64px;
   font-weight: 700;
@@ -75,14 +75,14 @@ a:hover {
   color: #fff;
 }
 
-#hero p {
+#home p {
   color: #fff;
   margin-bottom: 50px;
   font-size: 26px;
   font-family: "Noto Sans", sans-serif;
 }
 
-#hero p span {
+#home p span {
   color: #fff;
   padding-bottom: 4px;
   letter-spacing: 1px;
@@ -90,7 +90,7 @@ a:hover {
 }
 
 @media (min-width: 1024px) {
-  #hero {
+  #home {
     background-attachment: fixed;
   }
 }
@@ -151,49 +151,49 @@ section {
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
-.about .content h3 {
+#about .content h3 {
   font-weight: 700;
   font-size: 26px;
   color: #078283;
 }
 
-.about .content ul {
+#about .content ul {
   list-style: none;
   padding: 0;
 }
 
-.about .content ul li {
+#about .content ul li {
   margin-bottom: 20px;
   display: flex;
   align-items: center;
 }
 
-.about .content ul strong {
+#about .content ul strong {
   margin-right: 10px;
 }
 
-.about .content ul i {
+#about .content ul i {
   font-size: 16px;
   margin-right: 5px;
   color: #12CFBD;
   line-height: 0;
 }
 
-.about .content p:last-child {
+#about .content p:last-child {
   margin-bottom: 0;
 }
 
 /*--------------------------------------------------------------
 # Skills
 --------------------------------------------------------------*/
-.skills .progress {
+#skills .progress {
   margin-bottom: 1.5rem;
   display: block;
   background: none;
   border-radius: 0;
 }
 
-.skills .progress .skill {
+#skills .progress .skill {
   padding: 0;
   margin-bottom: auto;
   text-transform: uppercase;
@@ -203,12 +203,12 @@ section {
   color: #050d18;
 }
 
-.skills .progress .skill .val {
+#skills .progress .skill .val {
   float: right;
   font-style: normal;
 }
 
-.skills h3 {
+#skills h3 {
   font-size: 20px;
   font-weight: 600;
   font-family: "Noto Sans", sans-serif;
@@ -218,7 +218,7 @@ section {
 /*--------------------------------------------------------------
 # Resume
 --------------------------------------------------------------*/
-.resume .resume-title {
+#resume .resume-title {
   font-size: 26px;
   font-weight: 700;
   margin-top: 20px;
@@ -226,14 +226,14 @@ section {
   color: #050F18;
 }
 
-.resume .resume-item {
+#resume .resume-item {
   padding: 0 0 20px 20px;
   margin-top: -2px;
   border-left: 2px solid #1F9696;
   position: relative;
 }
 
-.resume .resume-item h4 {
+#resume .resume-item h4 {
   line-height: 18px;
   font-size: 18px;
   font-weight: 600;
@@ -243,7 +243,7 @@ section {
   margin-bottom: 10px;
 }
 
-.resume .resume-item h5 {
+#resume .resume-item h5 {
   font-size: 16px;
   background: #E3F5F9;
   padding: 5px 15px;
@@ -252,19 +252,19 @@ section {
   margin-bottom: 10px;
 }
 
-.resume .resume-item ul {
+#resume .resume-item ul {
   padding-left: 20px;
 }
 
-.resume .resume-item ul li {
+#resume .resume-item ul li {
   padding-bottom: 10px;
 }
 
-.resume .resume-item:last-child {
+#resume .resume-item:last-child {
   padding-bottom: 0;
 }
 
-.resume .resume-item::before {
+#resume .resume-item::before {
   content: "";
   position: absolute;
   width: 16px;
@@ -279,11 +279,11 @@ section {
 /*--------------------------------------------------------------
 # Projects
 --------------------------------------------------------------*/
-.projects .icon-box {
+#projects .icon-box {
   margin-bottom: 40px;
 }
 
-.projects .icon-hero {
+#projects .icon-hero {
   float: left;
   display: flex;
   align-items: center;
@@ -292,7 +292,7 @@ section {
   height: 240px;
 }
 
-.projects .icon-horizontal {
+#projects .icon-horizontal {
   float: left;
   display: flex;
   align-items: center;
@@ -301,7 +301,7 @@ section {
   height: 158px;
 }
 
-.projects .icon-small {
+#projects .icon-small {
   float: left;
   display: flex;
   align-items: center;
@@ -310,7 +310,7 @@ section {
   height: 140px;
 }
 
-.projects .icon {
+#projects .icon {
   float: left;
   display: flex;
   align-items: center;
@@ -323,47 +323,47 @@ section {
   border: 1px solid #16C6B5;
 }
 
-.projects .icon i {
+#projects .icon i {
   color: #fff;
   font-size: 24px;
   line-height: 0;
 }
 
-.projects .icon-box:hover .icon {
+#projects .icon-box:hover .icon {
   background: #fff;
 }
 
-.projects .icon-box:hover .icon i {
+#projects .icon-box:hover .icon i {
   color: #16C6B5;
 }
 
-.projects .title {
+#projects .title {
   margin-left: 80px;
   font-weight: 700;
   margin-bottom: 4px;
   font-size: 18px;
 }
 
-.projects .title a {
+#projects .title a {
   color: #343a40;
 }
 
-.projects .title a:hover {
+#projects .title a:hover {
   color: #14C9B8;
 }
 
-.projects .related {
+#projects .related {
   margin-bottom: 12px;
   color: #999DB0;
 }
 
-.projects .description {
+#projects .description {
   margin-left: 80px;
   line-height: 24px;
   font-size: 14px;
 }
 
-.projects h4 {
+#projects h4 {
   font-size: 22px;
   font-weight: 600;
   font-family: "Noto Sans", sans-serif;

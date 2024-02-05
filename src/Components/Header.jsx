@@ -1,13 +1,20 @@
+import { useState } from 'react';
 import './Header.css'
 
-export default function Header() {
+export default function Header({sectionsList, currentSection}) {
+  const [showHeader, setShowHeader] = useState(false);
+
+  function toggleHeader() {
+    setShowHeader(!showHeader);
+  }
+
   return (
     <>
     {/*======= Mobile nav toggle button =======*/}
-    <i className="bi bi-list mobile-nav-toggle d-xl-none"></i>
+    <button className="mobile-nav-toggle d-xl-none" onClick={toggleHeader}><i className="bi bi-list"></i></button>
 
     {/*======= Header =======*/}
-    <header id="header">
+    <header id="header" className={showHeader ? "show" : ""}>
       <div className="d-flex flex-column">
 
         <div className="profile">
@@ -26,10 +33,14 @@ export default function Header() {
 
         <nav id="navbar" className="nav-menu navbar">
           <ul>
-            <li><a href="#hero" className="nav-link scrollto active"><i className="bi bi-house"></i> <span>Inicio</span></a></li>
-            <li><a href="#about" className="nav-link scrollto"><i className="bi bi-person-badge"></i> <span>Sobre Mí</span></a></li>
-            <li><a href="#resume" className="nav-link scrollto"><i className="bi bi-file-earmark"></i> <span>Currículum</span></a></li>
-            <li><a href="#projects" className="nav-link scrollto"><i className="bi bi-columns-gap"></i> <span>Proyectos</span></a></li>
+            {sectionsList.map((section, index) => (
+              <li key={index}>
+                <a href={'#'+section.id} className={"nav-link scrollto " + (index == currentSection ? "active" : "")}>
+                  <i className={section.icon}></i>
+                  <span>{section.name}</span>
+                </a>
+              </li>
+            ))}
           </ul>
         </nav>
       </div>
