@@ -1,3 +1,4 @@
+import { resolve } from 'path'
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
@@ -8,5 +9,13 @@ export default defineConfig({
     watch: {
       usePolling: true
     }
+  },
+  build: {
+    rollupOptions: {
+      input: {
+        main: resolve(__dirname, 'index.html'),
+        nested: resolve(__dirname, 'pharmalzheimer_privacy_policy/index.html'),
+      },
+    },
   },
 })
