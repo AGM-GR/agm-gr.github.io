@@ -66,12 +66,25 @@ function App() {
       return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
+
+  function calculateAge() {
+    var today = new Date();
+    var birthDate = new Date("1995-06-26");
+    var age_now = today.getFullYear() - birthDate.getFullYear();
+    var month = today.getMonth() - birthDate.getMonth();
+    if (month < 0 || (month === 0 && today.getDate() < birthDate.getDate()))
+    {
+        age_now--;
+    }
+    return age_now;
+  }
+
   return (
     <>
       <Header sectionsList={sections} currentSection={currentSection} />
       {/* ======= Hero Section ======= */}
       <section ref={(node) => setSectionRef(sections[0].id, node)} id={sections[0].id} className="d-flex flex-column justify-content-center align-items-center">
-        <div className="hero-container">
+        <div className="hero-container mx-4">
           <h1>Alejandro <br/> Guerrero Martínez</h1>
           <p><span>Videogame Developer</span></p>
         </div>
@@ -84,39 +97,34 @@ function App() {
 
             <div className="section-title">
               <h2>Sobre mí</h2>
-              <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+              <p><i>Ingeniero informático</i>, entusiasta de la tecnología, la computación y los videojuegos desde siempre.
+                <br/>Llevo trabajando como <i>Desarrollador de Videojuegos</i> indie desde 2019.</p>
             </div>
 
             <div className="row">
-              <div className="col-lg-4">
+              <div className="col-lg-3">
                 <img className="img-fluid" src="https://avatars.githubusercontent.com/agm-gr" alt=""/>
               </div>
-              <div className="col-lg-8 pt-4 pt-lg-0 content">
+              <div className="col-lg-9 pt-4 pt-lg-0 content">
                 <h3>Programmer - Senior Unity Developer</h3>
-                <p className="fst-italic">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                  magna aliqua.
-                </p>
+                <p className="fst-italic"></p>
+                <br/>
                 <div className="row">
                   <div className="col-lg-6">
                     <ul>
-                      <li><i className="bi bi-chevron-right"></i> <strong>Fecha de nacimiento:</strong> <span>26 June 1995</span></li>
+                      <li><i className="bi bi-chevron-right"></i> <strong>Fecha de nacimiento:</strong> <span>26/06/1995</span></li>
                       <li><i className="bi bi-chevron-right"></i> <strong>Ciudad:</strong> <span>Valencia, Valencia, Spain</span></li>
                       <li><i className="bi bi-chevron-right"></i> <strong>Actualmente:</strong> <span>Desarrollador en <a href="https://www.bravezebra.com/" target="_blank" rel="noopener noreferrer">BraveZebra</a></span></li>
                     </ul>
                   </div>
                   <div className="col-lg-6">
                     <ul>
-                      <li><i className="bi bi-chevron-right"></i> <strong>Edad:</strong> <span>28</span></li>
+                      <li><i className="bi bi-chevron-right"></i> <strong>Edad:</strong> <span>{calculateAge()}</span></li>
                       <li><i className="bi bi-chevron-right"></i> <strong>Estudios:</strong> <span>Master en Ingeniería Informática</span></li>
                       <li><i className="bi bi-chevron-right"></i> <strong>Idiomas:</strong> <span>Español / Inglés</span></li>
                     </ul>
                   </div>
                 </div>
-                <p>
-                  Officiis eligendi itaque labore et dolorum mollitia officiis optio vero. Quisquam sunt adipisci omnis et ut. Nulla accusantium dolor incidunt officia tempore. Et eius omnis.
-                  Cupiditate ut dicta maxime officiis quidem quia. Sed et consectetur qui quia repellendus itaque neque. Aliquid amet quidem ut quaerat cupiditate. Ab et eum qui repellendus omnis culpa magni laudantium dolores.
-                </p>
               </div>
             </div>
 
@@ -143,9 +151,15 @@ function App() {
                 </div>
               </div>
 
+              <div className="col-lg-4 col-sm-6">
+                <div className="progress">
+                  <span className="skill">Porting</span>
+                </div>
+              </div>
+
             </div>
 
-            <h3 className="mt-4 mb-4">Conocimientos Medios:</h3>
+            <h3 className="mt-4 mb-4">Conocimientos Altos:</h3>
 
             <div className="row skills-content">
 
@@ -318,7 +332,7 @@ function App() {
                 <div className="icon-hero me-3"><img className="img-fluid" loading="lazy" src="https://cdn.cloudflare.steamstatic.com/steam/apps/1407300/hero_capsule.jpg"/></div>
                 <h4 className="title"><a href="https://store.steampowered.com/app/1407300/Hirilun/" target="_blank" rel="noopener noreferrer">Hirilun</a></h4>
                 <p className="related"><em>Gone Mad Studios</em></p>
-                <p className="description">Desarrollo y diseño del videojuego Hirilun.<br/>Programación de los shaders, efecto de outline y mejora de las sombras basado en el paper: Revectorization-Based Shadow Mapping.</p>
+                <p className="description">Desarrollo y diseño del videojuego Hirilun.<br/>Programación de Gameplay, custom shaders, efecto de outline y mejora de las sombras basado en el paper: Revectorization-Based Shadow Mapping.<br/> Integración con las tiendas de Steam, Epic Games y GOG.</p>
               </div>
 
               <div className="col-lg-6 col-md-12 icon-box">
@@ -332,7 +346,7 @@ function App() {
                 <div className="icon-hero me-3"><img className="img-fluid" loading="lazy" src="https://cdn.cloudflare.steamstatic.com/steam/apps/1333470/hero_capsule.jpg"/></div>
                 <h4 className="title"><a href="https://store.steampowered.com/app/1333470/Alex_Kidd_in_Miracle_World_DX/" target="_blank" rel="noopener noreferrer">Alex Kidd in Miracle World DX</a></h4>
                 <p className="related"><em>Gone Mad Studios</em></p>
-                <p className="description">Pulido del juego y bug-fixing en la parte final del desarrollo y en el port a Nintendo Switch.</p>
+                <p className="description">Desarrollador Auxiliar: Pulido del juego y bug-fixing en la parte final del desarrollo y en el port a Nintendo Switch.</p>
               </div>
 
               <div className="col-lg-6 col-md-12 icon-box">
@@ -458,7 +472,7 @@ function App() {
               <div className="col-lg-6 col-md-12 icon-box">
                 <div className="icon me-3"><i className="bi bi-github"></i></div>
                 <h4 className="title"><a href="https://github.com/AGM-GR/In-Game" target="_blank" rel="noopener noreferrer">In-Game</a></h4>
-                <p className="description">Projecto fin de master. Videjuego escape room para VR (Microsoft Mixed Reality) hecho en Unity.</p>
+                <p className="description">Projecto fin de master. Videjuego escape room para VR (Microsoft Mixed Reality) creado en Unity.</p>
               </div>
 
             </div>
