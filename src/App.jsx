@@ -97,7 +97,7 @@ function App() {
 
             <div className="section-title">
               <h2>Sobre mí</h2>
-              <p><i>Ingeniero informático</i>, entusiasta de la tecnología, la computación y los videojuegos desde siempre.
+              <p><i>Ingeniero informático</i>. Entusiasta de la tecnología, la computación y los videojuegos desde siempre.
                 <br/>Llevo trabajando como <i>Desarrollador de Videojuegos</i> indie desde 2019.</p>
             </div>
 
@@ -287,7 +287,7 @@ function App() {
                   <p><a href="https://gonemadstudios.github.io/" target="_blank" rel="noopener noreferrer"><em>Gone Mad Studios</em></a> - Valencia</p>
                   <p>Socio fundador de la empresa Gone Mad Studios, como cooperativa de trabajo asociado.
                     <br/>
-                    Gone Mad ofrecía trabajos de outsourcing y desarrollo a medida a la par que desarrollabamos videojuegos propios.</p>
+                    Gone Mad ofrecía trabajos de outsourcing y desarrollo a medida a la par que desarrollábamos videojuegos propios.</p>
                   <ul>
                     <li>Desarrollo a medida de videjuegos para proyectos de gamificación.</li>
                     <li>Desarrollo web PHP y node.</li>
@@ -302,7 +302,7 @@ function App() {
                   <p>Prácticas del Máster de Ingeniería Informática:</p>
                   <ul>
                     <li>Programador full stack, desarrollando soluciones con Node, AngularJS y MySQL para su sistema web.</li>
-                    <li>Prototipo de aplicación web (React) y Android nativo para traquear datos de estaciones de sonido</li>
+                    <li>Prototipo de aplicación web (React) y Android nativo para traquear datos de estaciones de sonido.</li>
                   </ul>
                 </div>
               </div>
@@ -435,7 +435,6 @@ function App() {
                 <h4 className="title"><a href="https://www.nintendo.es/Juegos/Programas-descargables-Nintendo-Switch/Sentry-City-2397224.html" target="_blank" rel="noopener noreferrer">Sentry City</a></h4>
                 <p className="related"><em>Brave Zebra</em></p>
               </div>
-
 
             </div>
 

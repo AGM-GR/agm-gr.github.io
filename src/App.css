@@ -348,3 +348,16 @@ section {
   font-family: "Noto Sans", sans-serif;
   color: #078283;
 }
+
+@media (max-width: 576px) {
+  #projects .icon-hero {
+    width: 140px;
+    height: 160px;
+  }
+
+  #projects .description {
+    display: inline-block;
+    margin-top: 2rem;
+    margin-left: 0px;
+  }
+}
