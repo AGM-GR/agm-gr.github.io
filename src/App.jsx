@@ -112,19 +112,30 @@ function App() {
                 <div className="row">
                   <div className="col-lg-6">
                     <ul>
+                      <li><i className="bi bi-chevron-right"></i> <strong>Edad:</strong> <span>{calculateAge()}</span></li>
                       <li><i className="bi bi-chevron-right"></i> <strong>Fecha de nacimiento:</strong> <span>26/06/1995</span></li>
                       <li><i className="bi bi-chevron-right"></i> <strong>Ciudad:</strong> <span>Valencia, Valencia, Spain</span></li>
-                      <li><i className="bi bi-chevron-right"></i> <strong>Actualmente:</strong> <span>Desarrollador en <a href="https://www.bravezebra.com/" target="_blank" rel="noopener noreferrer">BraveZebra</a></span></li>
                     </ul>
                   </div>
                   <div className="col-lg-6">
                     <ul>
-                      <li><i className="bi bi-chevron-right"></i> <strong>Edad:</strong> <span>{calculateAge()}</span></li>
                       <li><i className="bi bi-chevron-right"></i> <strong>Estudios:</strong> <span>Master en Ingeniería Informática</span></li>
                       <li><i className="bi bi-chevron-right"></i> <strong>Idiomas:</strong> <span>Español / Inglés</span></li>
                     </ul>
                   </div>
                 </div>
+
+                <br/>
+                <div className="row">
+                  <div className="col-lg-12">
+                    <ul>
+                      <li><i className="bi bi-chevron-right"></i>
+                        <strong>Actualmente:</strong> <span>Desarrollador en <a href="https://digitalsungames.com/" target="_blank" rel="noopener noreferrer">Digital Sun | Forge</a> (aka <a href="https://www.bravezebra.com/" target="_blank" rel="noopener noreferrer">BraveZebra</a>)
+                        </span></li>
+                    </ul>
+                  </div>
+                </div>
+
               </div>
             </div>
 
@@ -275,7 +286,7 @@ function App() {
                 <div className="resume-item">
                   <h4>Programador de Videojuegos</h4>
                   <h5>2022 - actualidad</h5>
-                  <p><a href="https://www.bravezebra.com/" target="_blank" rel="noopener noreferrer"><em>Brave Zebra</em></a> - Valencia</p>
+                  <p><a href="https://digitalsungames.com/" target="_blank" rel="noopener noreferrer">Digital Sun | Forge</a> (aka <a href="https://www.bravezebra.com/" target="_blank" rel="noopener noreferrer"><em>Brave Zebra</em></a>) - Valencia</p>
                   <ul>
                     <li>Porting de videojuegos a Nintendo Switch, Xbox One, Xbox Series, PlayStation 4 y PlayStation 5.</li>
                     <li>Desarrollo de prototipos y vertical slices del propio estudio.</li>
@@ -350,12 +361,18 @@ function App() {
               </div>
 
               <div className="col-lg-6 col-md-12 icon-box">
+                <div className="icon-hero me-3"><img className="img-fluid" loading="lazy" src="https://cdn.cloudflare.steamstatic.com/steam/apps/1622770/hero_capsule.jpg"/></div>
+                <h4 className="title"><a href="https://store.steampowered.com/app/1622770/Doors_Paradox/" target="_blank" rel="noopener noreferrer">Doors: Paradox</a></h4>
+                <p className="related"><em>Brave Zebra</em></p>
+                <p className="description">Programador de Porting: Nintendo Switch, Xbox One y Series, PlayStation 4 y 5. <br/> Integración del control con Gamepad y optimización en Nintendo Switch.</p>
+              </div>
+
+              <div className="col-lg-6 col-md-12 icon-box">
                 <div className="icon-hero me-3"><img className="img-fluid" loading="lazy" src="https://cdn.cloudflare.steamstatic.com/steam/apps/1051690/hero_capsule.jpg"/></div>
                 <h4 className="title"><a href="https://store.steampowered.com/app/1051690/Nightmare_Reaper/" target="_blank" rel="noopener noreferrer">Nightmare Reaper</a></h4>
                 <p className="related"><em>Brave Zebra</em></p>
                 <p className="description">Desarrollador Auxiliar de Porting: Integración de requerimientos de Xbox(GDK).</p>
               </div>
-
 
 
             </div>
@@ -433,6 +450,12 @@ function App() {
               <div className="col-lg-4 col-md-6 icon-box">
                 <div className="icon-small me-3"><img className="img-fluid" loading="lazy" src="https://fs-prod-cdn.nintendo-europe.com/media/images/11_square_images/games_18/nintendo_switch_download_software/1x1_NSwitchDS_SentryCity_image500w.jpg"/></div>
                 <h4 className="title"><a href="https://www.nintendo.es/Juegos/Programas-descargables-Nintendo-Switch/Sentry-City-2397224.html" target="_blank" rel="noopener noreferrer">Sentry City</a></h4>
+                <p className="related"><em>Brave Zebra</em></p>
+              </div>
+
+              <div className="col-lg-4 col-md-6 icon-box">
+                <div className="icon-small me-3"><img className="img-fluid" loading="lazy" src="https://www.nintendo.com/eu/media/images/11_square_images/games_18/nintendo_switch_download_software/1x1_NSwitchDS_AttackOfTheKarens_image500w.jpg"/></div>
+                <h4 className="title"><a href="https://www.nintendo.com/es-es/Juegos/Programas-descargables-Nintendo-Switch/Attack-of-the-Karens-2535409.html" target="_blank" rel="noopener noreferrer">Attack of the Karens</a></h4>
                 <p className="related"><em>Brave Zebra</em></p>
               </div>
 
