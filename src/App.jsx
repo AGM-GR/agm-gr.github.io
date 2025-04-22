@@ -436,6 +436,12 @@ function App() {
               </div>
 
               <div className="col-lg-4 col-md-6 icon-box">
+                <div className="icon-small me-3"><img className="img-fluid" loading="lazy" src="https://www.nintendo.com/eu/media/images/assets/nintendo_switch_games/freddyfarmer/1x1_FreddyFarmer_image500w.jpg"/></div>
+                <h4 className="title"><a href="https://www.nintendo.es/Juegos/Programas-descargables-Nintendo-Switch/Freddy-Farmer-2710450.html" target="_blank" rel="noopener noreferrer">Freddy Farmer</a></h4>
+                <p className="related"><em>Gone Mad Studios</em></p>
+              </div>
+
+              <div className="col-lg-4 col-md-6 icon-box">
                 <div className="icon-small me-3"><img className="img-fluid" loading="lazy" src="https://fs-prod-cdn.nintendo-europe.com/media/images/11_square_images/games_18/nintendo_switch_download_software/1x1_NSwitchDS_TheLegendOfGwen_image500w.jpg"/></div>
                 <h4 className="title"><a href="https://www.nintendo.es/Juegos/Programas-descargables-Nintendo-Switch/The-Legend-of-Gwen-2319905.html" target="_blank" rel="noopener noreferrer">The Legend of Gwen</a></h4>
                 <p className="related"><em>Brave Zebra</em></p>
@@ -479,11 +485,31 @@ function App() {
                 <p className="description">Programación.</p>
               </div>
 
+              <div className="col-lg-6 col-md-12 icon-box">
+                <div className="icon-horizontal me-3"><img className="img-fluid" loading="lazy" src="https://img.itch.zone/aW1nLzE4OTU3Mjg1LmdpZg==/315x250%23cm/n1WTtq.gif"/></div>
+                <h4 className="title"><a href="https://kikoalfaro.itch.io/smile-brothers" target="_blank" rel="noopener noreferrer">Smile Brothers</a></h4>
+                <p className="related"><em>Global Game Jam 2024</em></p>
+                <p className="description">Programación.</p>
+              </div>
+
+              <div className="col-lg-6 col-md-12 icon-box">
+                <div className="icon-horizontal me-3"><img className="img-fluid" loading="lazy" src="https://img.itch.zone/aW1nLzE5NTQ1MTIxLnBuZw==/315x250%23c/ATkdpZ.png"/></div>
+                <h4 className="title"><a href="https://agm-cp.itch.io/globubble-jam-2k25" target="_blank" rel="noopener noreferrer">Globubble Jam 2k25</a></h4>
+                <p className="related"><em>Global Game Jam 2025</em></p>
+                <p className="description">Programación.</p>
+              </div>
+
             </div>
 
             <h4 className="mt-4 mb-4">Proyectos Open Source:</h4>
 
             <div className="row">
+
+              <div className="col-lg-6 col-md-12 icon-box">
+                <div className="icon me-3"><i className="bi bi-github"></i></div>
+                <h4 className="title"><a href="https://github.com/AGM-GR/UnityURP.Outline" target="_blank" rel="noopener noreferrer">UnityURP.Outline</a></h4>
+                <p className="description">Efecto de Outline por objeto creado para Unity 6 con Universal Render Pipeline.</p>
+              </div>
 
               <div className="col-lg-6 col-md-12 icon-box">
                 <div className="icon me-3"><i className="bi bi-github"></i></div>
