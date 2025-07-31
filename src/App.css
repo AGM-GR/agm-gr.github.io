@@ -269,6 +269,7 @@ section {
   justify-content: center;
   width: 200px;
   height: 240px;
+  overflow: hidden;
 }
 
 #projects .icon-horizontal {
@@ -300,6 +301,10 @@ section {
   border-radius: 50%;
   transition: 0.5s;
   border: 1px solid #16C6B5;
+}
+
+#projects .icon a {
+  line-height: 0;
 }
 
 #projects .icon i {
@@ -334,6 +339,10 @@ section {
 #projects .related {
   margin-bottom: 12px;
   color: #999DB0;
+}
+
+#projects .related i {
+  margin-right: 10px;
 }
 
 #projects .description {
