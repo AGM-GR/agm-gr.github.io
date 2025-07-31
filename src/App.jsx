@@ -414,7 +414,7 @@ function App() {
                   <i class="bi bi-nintendo-switch"></i>
                   <i class="bi bi-xbox"></i>
                 </p>
-                <p className="description">Programador de Porting: Nintendo Switch, Xbox One y Series, Microsoft Store.</p>
+                <p className="description">Programador de Porting: Nintendo Switch, Xbox One y Series.</p>
               </div>
 
               <div className="col-lg-6 col-md-12 icon-box">
