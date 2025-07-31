@@ -429,6 +429,17 @@ function App() {
                 <p className="description">Programador de Porting: Nintendo Switch, Xbox One y Series, Microsoft Store.</p>
               </div>
 
+              <div className="col-lg-6 col-md-12 icon-box">
+                <div className="icon-hero me-3"><img className="img-fluid" loading="lazy" src="https://cdn.fastly.steamstatic.com/steam/apps/1737980/hero_capsule.jpg"/></div>
+                <h4 className="title"><a href="https://www.nintendo.es/Juegos/Programas-descargables-Nintendo-Switch/Galacticon-2207059.html" target="_blank" rel="noopener noreferrer">Galacticon</a></h4>
+                <p className="related">
+                  <em>Gone Mad Studios</em>
+                  <br/>
+                  <i class="bi bi-nintendo-switch"></i>
+                  <i class="bi bi-xbox"></i>
+                </p>
+                <p className="description">Programador de Porting: Nintendo Switch, Xbox One y Series, Microsoft Store.</p>
+              </div>
 
             </div>
 
@@ -489,16 +500,6 @@ function App() {
               <div className="col-lg-4 col-md-6 icon-box">
                 <div className="icon-small me-3"><img className="img-fluid" loading="lazy" src="https://fs-prod-cdn.nintendo-europe.com/media/images/11_square_images/games_18/nintendo_switch_download_software/SQ_NSwitchDS_LoneMcLoneganAWesternAdventure_image500w.jpg"/></div>
                 <h4 className="title"><a href="https://www.nintendo.es/Juegos/Programas-descargables-Nintendo-Switch/Lone-McLonegan-A-Western-Adventure-2032270.html" target="_blank" rel="noopener noreferrer">Lone McLonegan : A Western Adventure</a></h4>
-                <p className="related">
-                  <em>Gone Mad Studios</em>
-                  <br/>
-                  <i class="bi bi-nintendo-switch"></i>
-                </p>
-              </div>
-
-              <div className="col-lg-4 col-md-6 icon-box">
-                <div className="icon-small me-3"><img className="img-fluid" loading="lazy" src="https://fs-prod-cdn.nintendo-europe.com/media/images/11_square_images/games_18/nintendo_switch_download_software/1x1_NSwitchDS_Galacticon_image500w.jpg"/></div>
-                <h4 className="title"><a href="https://www.nintendo.es/Juegos/Programas-descargables-Nintendo-Switch/Galacticon-2207059.html" target="_blank" rel="noopener noreferrer">Galacticon</a></h4>
                 <p className="related">
                   <em>Gone Mad Studios</em>
                   <br/>
