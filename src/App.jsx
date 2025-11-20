@@ -283,7 +283,12 @@ function App() {
                   <h4>{t("cv.qualification.degree.title")}</h4>
                   <h5>2013 - 2017</h5>
                   <p><em>{t("cv.qualification.degree.location")}</em></p>
-                  <p>{t("cv.qualification.degree.abstract")}</p>
+                  <p>
+                    <Trans
+                        i18nKey="cv.qualification.degree.abstract"
+                        components={{ break: <br /> }}
+                      />
+                  </p>
                 </div>
               </div>
               <div className="col-lg-6">

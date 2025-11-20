@@ -76,7 +76,7 @@
       {
         "title": "Grado en Ingeniería Informática",
         "location": "Universidad de Granada",
-        "abstract": "Durante mis estudios de grado decidí enfocar mis optativas al desarrollo de videojuegos y aprendí de forma autodidáctica sobre Unity 3D."
+        "abstract": "Formación en el diseño, desarrollo, implementación y mantenimiento de sistemas y aplicaciones informáticas, aplicando conocimientos de matemáticas, informática y electrónica.<break/> Durante mis estudios de grado decidí enfocarlo al desarrollo grádico y de videojuegos, trabajando de forma autodidáctica sobre Unity 3D."
       }
     },
     "experience":
@@ -94,7 +94,7 @@
         "title": "Programador de Videojuegos",
         "location": "Valencia",
         "abstract": "Socio fundador de la empresa Gone Mad Studios, como cooperativa de trabajo asociado.<break/>Gone Mad ofrecía trabajos de outsourcing y desarrollo a medida a la par que desarrollábamos videojuegos propios.",
-        "development": "Desarrollo a medida de videjuegos para proyectos de gamificación.",
+        "development": "Desarrollo a medida de videojuegos para proyectos de gamificación.",
         "web": "Desarrollo web PHP y node.",
         "porting": "Servicio de Porting de videjuegos a Nintendo Switch.",
         "projects": "Diseño y desarrollo de los videojuegos: Hatventure y Hirilun."
@@ -157,9 +157,9 @@
     "openSource":
     {
       "title": "Proyectos Open Source",
-      "urpOutline": "Efecto de Outline por objeto creado para Unity 6 con Universal Render Pipeline.",
+      "urpOutline": "Efecto de Outline por objeto. Creado para Unity 6 con Universal Render Pipeline.",
       "edgeDetection": "Adaptación del efecto de Unity: \"Edge Detect Normals\" a Post Processing Stack v2, añadiendo nuevas características y mejoras.",
-      "ingame": "Projecto fin de master. Videjuego escape room para VR (Microsoft Mixed Reality) creado en Unity."
+      "ingame": "Proyecto fin de master. Videjuego escape room para VR (Microsoft Mixed Reality) creado en Unity."
     },
     "gamejams":
     {

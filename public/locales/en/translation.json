@@ -2,58 +2,58 @@
   "home":
   {
     "title": "Home",
-    "occupation": "Videogame Developer"
+    "occupation": "Video Game Developer"
   },
 
 
   "about":
   {
     "title": "About me",
-    "abstract": "<italic>Ingeniero informático</italic>. Entusiasta de la tecnología, la computación y los videojuegos desde siempre.<break/>Llevo trabajando como <italic>Desarrollador de Videojuegos</italic> indie desde 2019.",
-    "occupation": "Programador - Senior Unity Developer",
+    "abstract": "<italic>Computer Engineer</italic>. A lifelong enthusiast of technology, computing, and video games.<break/> I've been working as an indie <italic>game developer</italic> since 2019.",
+    "occupation": "Developer - Senior Unity Developer",
 
     "age":
     {
-      "label": "Edad"
+      "label": "Age"
     },
     "city":
     {
-      "label": "Ciudad",
+      "label": "Location",
       "content": "Valencia, Valencia, Spain"
     },
     "qualification":
     {
       "label": "Qualification",
-      "content": "Master en Ingeniería Informática"
+      "content": "Master in Computer Engineering"
     },
     "languages":
     {
-      "label": "Idiomas",
-      "content": "Español / Inglés"
+      "label": "Languages",
+      "content": "Spanish / English"
     },
     "currently":
     {
-      "label": "Actualmente",
-      "content": "Desarrollador en"
+      "label": "Current Occupation",
+      "content": "Developer at"
     },
 
     "knowledge":
     {
       "advanced":
       {
-        "label": "Conocimientos Avanzados"
+        "label": "Advanced Knowledge"
       },
       "high":
       {
-        "label": "Conocimientos Altos"
+        "label": "High Knowledge"
       },
       "base":
       {
-        "label": "Conocimientos Básicos",
-        "modeling": "Modelado (Blender/3ds max)",
-        "images": "Edición de imágenes (Gimp)",
-        "native": "Android Nativo",
-        "server": "Gestión servidores"
+        "label": "Base Knowledge",
+        "modeling": "Modeling (Blender/3ds max)",
+        "images": "Image edition (Gimp)",
+        "native": "Native Android",
+        "server": "Server Management"
       }
     }
   },
@@ -68,15 +68,15 @@
       "title": "Qualification",
       "master":
       {
-        "title": "Master en Ingeniería Informática",
-        "location": "Universidad de Granada",
-        "abstract": "Master profesionalizante de Ingeniería Informática, en el que se adquieren conocimientos de distintas ramas de la informática (UI/UX, Programación web/mobil, Análisis de datos, Big Data, Sistemas en red, Creación y aprovisionamiento de servicios ...) así como diseño del software y metodologías de trabajo."
+        "title": "Master in Computer Engineering",
+        "location": "University of Granada",
+        "abstract": "Professional Master's Degree in Computer Engineering, in which students acquire knowledge of different branches of computer science (UI/UX, web/mobile programming, data analysis, big data, network systems, service creation and provisioning, etc.) as well as software design and working methodologies."
       },
       "degree":
       {
-        "title": "Grado en Ingeniería Informática",
-        "location": "Universidad de Granada",
-        "abstract": "Durante mis estudios de grado decidí enfocar mis optativas al desarrollo de videojuegos y aprendí de forma autodidáctica sobre Unity 3D."
+        "title": "Degree in Computer Engineering",
+        "location": "University of Granada",
+        "abstract": "Education in the design, development, implementation, and maintenance of computer systems and applications, applying knowledge of mathematics, computer science, and electronics.<break/>During my degree studies, I decided to focus on graphic and video game development, teaching myself Unity 3D."
       }
     },
     "experience":
@@ -84,28 +84,28 @@
       "title": "Professional Experience",
       "bravezebra":
       {
-        "title": "Programador de Videojuegos",
+        "title": "Video Game Developer",
         "location": "Valencia",
-        "porting": "Porting de videojuegos a Nintendo Switch, Xbox One, Xbox Series, PlayStation 4 y PlayStation 5.",
-        "development": "Desarrollo de prototipos y vertical slices del propio estudio."
+        "porting": "Video Games porting to Nintendo Switch, Xbox One, Xbox Series, PlayStation 4 y PlayStation 5.",
+        "development": "Development of prototypes and vertical slices."
       },
       "gonemad":
       {
-        "title": "Programador de Videojuegos",
+        "title": "Video Game Developer",
         "location": "Valencia",
-        "abstract": "Socio fundador de la empresa Gone Mad Studios, como cooperativa de trabajo asociado.<break/>Gone Mad ofrecía trabajos de outsourcing y desarrollo a medida a la par que desarrollábamos videojuegos propios.",
-        "development": "Desarrollo a medida de videjuegos para proyectos de gamificación.",
-        "web": "Desarrollo web PHP y node.",
-        "porting": "Servicio de Porting de videjuegos a Nintendo Switch.",
-        "projects": "Diseño y desarrollo de los videojuegos: Hatventure y Hirilun."
+        "abstract": "Founding partner of Gone Mad Studios, a worker cooperative.<break/>Gone Mad offered outsourcing and custom development work while also developing its own video games.",
+        "development": "Custom video game development for gamification projects.",
+        "web": "PHP and Node web development.",
+        "porting": "Video Game porting to Nintendo Switch.",
+        "projects": "Design and development of the video games: Hatventure and Hirilun."
       },
       "dba":
       {
-        "title": "Programador de aplicaciones Web",
+        "title": "Web Apps Developer",
         "location": "Granada",
-        "abstract": "Prácticas del Máster de Ingeniería Informática:",
-        "services": "Programador full stack, desarrollando soluciones con Node, AngularJS y MySQL para su sistema web.",
-        "development": "Prototipo de aplicación web (React) y Android nativo, para hacer seguimiento de datos de estaciones de sonido."
+        "abstract": "Internships for the Master in Computer Engineering:",
+        "services": "Full stack programmer, developing solutions with Node, AngularJS, and MySQL for their web system.",
+        "development": "Prototype web application (React) and native Android app for tracking sound stations data."
       }
     }
   },
@@ -115,51 +115,51 @@
     "title": "Projects",
     "hatventure":
     {
-      "abstract": "Desarrollo y diseño del videojuego Hatventure para móviles Android.<break/>Autopublicación en Google Play Store."
+      "abstract": "Development and design of the Hatventure video game for Android devices.<break/>Self-publishing on Google Play Store."
     },
     "hirilun":
     {
-      "abstract": "Desarrollo y diseño del videojuego Hirilun.<break/>Programación de Gameplay, custom shaders, efecto de outline y mejora de las sombras basado en el paper: Revectorization-Based Shadow Mapping.<break/> Integración con las tiendas de Steam, Epic Games y GOG."
+      "abstract": "Development and design of the Hirilun video game.<break/>Gameplay programming, custom shaders, outline effect, and shadow enhancement based on the paper: Revectorization-Based Shadow Mapping.<break/>Integration with Steam, Epic Games, and GOG stores."
     },
     "soti":
     {
-      "abstract": "Lead programmer de Porting: Nintendo Switch, Xbox One y Series, PlayStation 4 y 5. <break/> Integración del control con Gamepad, optimización de rendimiento para consolas y plataformas móviles."
+      "abstract": "Lead programmer for porting: Nintendo Switch, Xbox One and Series, PlayStation 4 and 5. <break/> Gamepad controller integration, performance optimization for consoles and mobile platforms."
     },
     "alexkidd":
     {
-      "abstract": "Programador Auxiliar: Pulido del juego y bug-fixing en la parte final del desarrollo y en el port a Nintendo Switch."
+      "abstract": "Assistant Programmer: Game polishing and bug-fixing in the final part of development and in the port to Nintendo Switch."
     },
     "rueValley":
     {
-      "abstract": "Programador de Porting: Nintendo Switch, Xbox One y Series, PlayStation 4 y 5. <break/> Adaptación de Shaders y Optimización en Nintendo Switch."
+      "abstract": "Porting Programmer: Nintendo Switch, Xbox One and Series, PlayStation 4 and 5. <break/> Shader Adaptation and Optimization on Nintendo Switch."
     },
     "doors":
     {
-      "abstract": "Programador de Porting: Nintendo Switch, Xbox One y Series, PlayStation 4 y 5. <break/> Integración del control con Gamepad y optimización en Nintendo Switch."
+      "abstract": "Porting Programmer: Nintendo Switch, Xbox One and Series, PlayStation 4 and 5. <break/> Gamepad controller integration and optimization on Nintendo Switch."
     },
     "nightmarereaper":
     {
-      "abstract": "Programador Auxiliar de Porting: Integración de requerimientos de Xbox (GDK)."
+      "abstract": "Assistant Porting Programmer: Integration of Xbox requirements (GDK)."
     },
     "wca":
     {
-      "abstract": "Programador de Porting: Nintendo Switch, Xbox One y Series."
+      "abstract": "Porting Programmer: Nintendo Switch, Xbox One and Series."
     },
     "freddyfarmer":
     {
-      "abstract": "Programador de Porting: Nintendo Switch, Xbox One y Series, Microsoft Store."
+      "abstract": "Porting Programmer: Nintendo Switch, Xbox One and Series, Microsoft Store."
     },
     "galacticon":
     {
-      "abstract": "Programador de Porting: Nintendo Switch, Xbox One y Series, Microsoft Store."
+      "abstract": "Porting Programmer: Nintendo Switch, Xbox One and Series, Microsoft Store."
     },
     "switch": "Nintendo Switch Ports",
     "openSource":
     {
       "title": "Open Source Projects",
-      "urpOutline": "Efecto de Outline por objeto creado para Unity 6 con Universal Render Pipeline.",
-      "edgeDetection": "Adaptación del efecto de Unity: \"Edge Detect Normals\" a Post Processing Stack v2, añadiendo nuevas características y mejoras.",
-      "ingame": "Projecto fin de master. Videjuego escape room para VR (Microsoft Mixed Reality) creado en Unity."
+      "urpOutline": "Outline effect per object. Created for Unity 6 with Universal Render Pipeline.",
+      "edgeDetection": "Adaptation of the Unity effect: \"Edge Detect Normals\" to Post Processing Stack v2, adding new features and improvements",
+      "ingame": "Master's thesis project. Escape room video game for VR (Microsoft Mixed Reality) created in Unity."
     },
     "gamejams":
     {
