@@ -1,5 +1,8 @@
 import { useState, useRef, useEffect } from 'react'
+import { Trans, useTranslation } from "react-i18next";
+
 import Header from './Components/Header.jsx'
+
 import './App.css'
 
 import HatventureHero from '/assets/projects/hatventure_herocapsule.jpg'
@@ -8,22 +11,22 @@ import HatventureHero from '/assets/projects/hatventure_herocapsule.jpg'
 const sectionsList = [
   {
     id: 'home',
-    name: 'Inicio',
+    key: 'home.title',
     icon: 'bi-house',
   },
   {
     id: 'about',
-    name: 'Sobre Mí',
+    key: 'about.title',
     icon: 'bi-person-badge',
   },
   {
     id: 'resume',
-    name: 'Currículum',
+    key: 'cv.title',
     icon: 'bi bi-file-earmark',
   },
   {
     id: 'projects',
-    name: 'Proyectos',
+    key: 'projects.title',
     icon: 'bi bi-columns-gap',
   },
 ];
@@ -33,6 +36,7 @@ function App() {
   const [sections, setSections] = useState(sectionsList);
   const [currentSection, setCurrentSection] = useState(0);
   const sectionRefs = useRef(null);
+  const { t } = useTranslation();
 
   function getSectionRefs() {
     if (!sectionRefs.current) {
@@ -86,7 +90,7 @@ function App() {
       <section ref={(node) => setSectionRef(sections[0].id, node)} id={sections[0].id} className="d-flex flex-column justify-content-center align-items-center">
         <div className="hero-container mx-4">
           <h1>Alejandro <br/> Guerrero Martínez</h1>
-          <p><span>Videogame Developer</span></p>
+          <p><span>{t("home.occupation")}</span></p>
         </div>
       </section>{/* End Hero */}
 
@@ -96,9 +100,11 @@ function App() {
           <div className="container">
 
             <div className="section-title">
-              <h2>Sobre mí</h2>
-              <p><i>Ingeniero informático</i>. Entusiasta de la tecnología, la computación y los videojuegos desde siempre.
-                <br/>Llevo trabajando como <i>Desarrollador de Videojuegos</i> indie desde 2019.</p>
+              <h2>{t("about.title")}</h2>
+              <p><Trans
+                  i18nKey="about.abstract"
+                  components={{ italic: <i />, break: <br /> }}
+                /></p>
             </div>
 
             <div className="row">
@@ -106,21 +112,20 @@ function App() {
                 <img className="img-fluid" src="https://avatars.githubusercontent.com/agm-gr" alt=""/>
               </div>
               <div className="col-lg-9 pt-4 pt-lg-0 content">
-                <h3>Programmer - Senior Unity Developer</h3>
+                <h3>{t("about.occupation")}</h3>
                 <p className="fst-italic"></p>
                 <br/>
                 <div className="row">
                   <div className="col-lg-6">
                     <ul>
-                      <li><i className="bi bi-chevron-right"></i> <strong>Edad:</strong> <span>{calculateAge()}</span></li>
-                      <li><i className="bi bi-chevron-right"></i> <strong>Fecha de nacimiento:</strong> <span>26/06/1995</span></li>
-                      <li><i className="bi bi-chevron-right"></i> <strong>Ciudad:</strong> <span>Valencia, Valencia, Spain</span></li>
+                      <li><i className="bi bi-chevron-right"></i> <strong>{t("about.age.label")}:</strong> <span>{calculateAge()}</span></li>
+                      <li><i className="bi bi-chevron-right"></i> <strong>{t("about.city.label")}:</strong> <span>{t("about.city.content")}</span></li>
                     </ul>
                   </div>
                   <div className="col-lg-6">
                     <ul>
-                      <li><i className="bi bi-chevron-right"></i> <strong>Estudios:</strong> <span>Master en Ingeniería Informática</span></li>
-                      <li><i className="bi bi-chevron-right"></i> <strong>Idiomas:</strong> <span>Español / Inglés</span></li>
+                      <li><i className="bi bi-chevron-right"></i> <strong>{t("about.qualification.label")}:</strong> <span>{t("about.qualification.content")}</span></li>
+                      <li><i className="bi bi-chevron-right"></i> <strong>{t("about.languages.label")}:</strong> <span>{t("about.languages.content")}</span></li>
                     </ul>
                   </div>
                 </div>
@@ -130,7 +135,7 @@ function App() {
                   <div className="col-lg-12">
                     <ul>
                       <li><i className="bi bi-chevron-right"></i>
-                        <strong>Actualmente:</strong> <span>Desarrollador en <a href="https://digitalsungames.com/digital-sun-forge/" target="_blank" rel="noopener noreferrer">Digital Sun | Forge</a> (aka <a href="https://www.bravezebra.com/" target="_blank" rel="noopener noreferrer">BraveZebra</a>)
+                        <strong>{t("about.currently.label")}:</strong> <span>{t("about.currently.content")} <a href="https://digitalsungames.com/digital-sun-forge/" target="_blank" rel="noopener noreferrer">Digital Sun | Forge</a> (aka <a href="https://www.bravezebra.com/" target="_blank" rel="noopener noreferrer">BraveZebra</a>)
                         </span></li>
                     </ul>
                   </div>
@@ -146,7 +151,7 @@ function App() {
         <section id="skills" className="section-bg">
           <div className="container">
 
-            <h3 className="mt-4 mb-4">Conocimientos Avanzados:</h3>
+            <h3 className="mt-4 mb-4">{t("about.knowledge.advanced.label")}:</h3>
 
             <div className="row skills-content">
 
@@ -170,7 +175,7 @@ function App() {
 
             </div>
 
-            <h3 className="mt-4 mb-4">Conocimientos Altos:</h3>
+            <h3 className="mt-4 mb-4">{t("about.knowledge.high.label")}:</h3>
 
             <div className="row skills-content">
 
@@ -212,7 +217,7 @@ function App() {
 
             </div>
 
-            <h3 className="mt-4 mb-4">Conocimientos Básicos:</h3>
+            <h3 className="mt-4 mb-4">{t("about.knowledge.base.label")}:</h3>
 
             <div className="row skills-content">
 
@@ -224,19 +229,19 @@ function App() {
 
               <div className="col-lg-4 col-sm-6">
                 <div className="progress">
-                  <span className="skill">Modelado (Blender/3ds max)</span>
+                  <span className="skill">{t("about.knowledge.base.modeling")}</span>
                 </div>
               </div>
 
               <div className="col-lg-4 col-sm-6">
                 <div className="progress">
-                  <span className="skill">Edición de imágenes (Gimp)</span>
+                  <span className="skill">{t("about.knowledge.base.images")}</span>
                 </div>
               </div>
 
               <div className="col-lg-4 col-sm-6">
                 <div className="progress">
-                  <span className="skill">Android Nativo</span>
+                  <span className="skill">{t("about.knowledge.base.native")}</span>
                 </div>
               </div>
 
@@ -248,7 +253,7 @@ function App() {
 
               <div className="col-lg-4 col-sm-6">
                 <div className="progress">
-                  <span className="skill">Gestión servidores</span>
+                  <span className="skill">{t("about.knowledge.base.server")}</span>
                 </div>
               </div>
 
@@ -262,58 +267,59 @@ function App() {
           <div className="container">
 
             <div className="section-title">
-              <h2>Currículum</h2>
+              <h2>{t("cv.title")}</h2>
             </div>
 
             <div className="row">
               <div className="col-lg-6">
-                <h3 className="resume-title">Educación</h3>
+                <h3 className="resume-title">{t("cv.qualification.title")}</h3>
                 <div className="resume-item">
-                  <h4>Master en Ingeniería Informática</h4>
+                  <h4>{t("cv.qualification.master.title")}</h4>
                   <h5>2017 - 2018</h5>
-                  <p><em>Universidad de Granada</em></p>
-                  <p>Master profesionalizante de la Ingeniería Informática, en el que se adquieren conocimientos de distintas ramas de la informática (Análisis de datos, Big Data, Sistemas en red, Creación y aprovisionamiento de servicios ...) así como diseño del software y metodologías de trabajo.</p>
+                  <p><em>{t("cv.qualification.master.location")}</em></p>
+                  <p>{t("cv.qualification.master.abstract")}</p>
                 </div>
                 <div className="resume-item">
-                  <h4>Grado en Ingeniería Informática</h4>
+                  <h4>{t("cv.qualification.degree.title")}</h4>
                   <h5>2013 - 2017</h5>
-                  <p><em>Universidad de Granada</em></p>
-                  <p>Durante mis estudios de grado decidí enfocar mis optativas al desarrollo de videojuegos y aprendí de forma autodidáctica sobre Unity 3D.</p>
+                  <p><em>{t("cv.qualification.degree.location")}</em></p>
+                  <p>{t("cv.qualification.degree.abstract")}</p>
                 </div>
               </div>
               <div className="col-lg-6">
-                <h3 className="resume-title">Professional Experience</h3>
+                <h3 className="resume-title">{t("cv.experience.title")}</h3>
                 <div className="resume-item">
-                  <h4>Programador de Videojuegos</h4>
-                  <h5>2022 - actualidad</h5>
-                  <p><a href="https://digitalsungames.com/digital-sun-forge/" target="_blank" rel="noopener noreferrer">Digital Sun | Forge</a> (aka <a href="https://www.bravezebra.com/" target="_blank" rel="noopener noreferrer"><em>Brave Zebra</em></a>) - Valencia</p>
+                  <h4>{t("cv.experience.bravezebra.title")}</h4>
+                  <h5>2022 - {t("cv.current")}</h5>
+                  <p><a href="https://digitalsungames.com/digital-sun-forge/" target="_blank" rel="noopener noreferrer">Digital Sun | Forge</a> (aka <a href="https://www.bravezebra.com/" target="_blank" rel="noopener noreferrer"><em>Brave Zebra</em></a>) - {t("cv.experience.bravezebra.location")}</p>
                   <ul>
-                    <li>Porting de videojuegos a Nintendo Switch, Xbox One, Xbox Series, PlayStation 4 y PlayStation 5.</li>
-                    <li>Desarrollo de prototipos y vertical slices del propio estudio.</li>
+                    <li>{t("cv.experience.bravezebra.porting")}</li>
+                    <li>{t("cv.experience.bravezebra.development")}</li>
                   </ul>
                 </div>
                 <div className="resume-item">
-                  <h4>Programador de Videojuegos</h4>
+                  <h4>{t("cv.experience.gonemad.title")}</h4>
                   <h5>2019 - 2023</h5>
-                  <p><a href="https://gonemadstudios.github.io/" target="_blank" rel="noopener noreferrer"><em>Gone Mad Studios</em></a> - Valencia</p>
-                  <p>Socio fundador de la empresa Gone Mad Studios, como cooperativa de trabajo asociado.
-                    <br/>
-                    Gone Mad ofrecía trabajos de outsourcing y desarrollo a medida a la par que desarrollábamos videojuegos propios.</p>
+                  <p><a href="https://gonemadstudios.github.io/" target="_blank" rel="noopener noreferrer"><em>Gone Mad Studios</em></a> - {t("cv.experience.gonemad.location")}</p>
+                  <p><Trans
+                      i18nKey="cv.experience.gonemad.abstract"
+                      components={{ break: <br /> }}
+                    /></p>
                   <ul>
-                    <li>Desarrollo a medida de videjuegos para proyectos de gamificación.</li>
-                    <li>Desarrollo web PHP y node.</li>
-                    <li>Servicio de Porting de videjuegos a Nintendo Switch.</li>
-                    <li>Diseño y desarrollo de Hatventure y Hirilun.</li>
+                    <li>{t("cv.experience.gonemad.development")}</li>
+                    <li>{t("cv.experience.gonemad.web")}</li>
+                    <li>{t("cv.experience.gonemad.porting")}</li>
+                    <li>{t("cv.experience.gonemad.projects")}</li>
                   </ul>
                 </div>
                 <div className="resume-item">
-                  <h4>Programador de aplicaciones Web</h4>
+                  <h4>{t("cv.experience.dba.title")}</h4>
                   <h5>jun.2018 - sept.2018</h5>
-                  <p><a href="https://dba-acustica.es/" target="_blank" rel="noopener noreferrer"><em>dBA Acústica</em></a> - Granada</p>
-                  <p>Prácticas del Máster de Ingeniería Informática:</p>
+                  <p><a href="https://dba-acustica.es/" target="_blank" rel="noopener noreferrer"><em>dBA Acústica</em></a> - {t("cv.experience.dba.location")}</p>
+                  <p>{t("cv.experience.dba.abstract")}</p>
                   <ul>
-                    <li>Programador full stack, desarrollando soluciones con Node, AngularJS y MySQL para su sistema web.</li>
-                    <li>Prototipo de aplicación web (React) y Android nativo, para hacer seguimiento de datos de estaciones de sonido.</li>
+                    <li>{t("cv.experience.dba.services")}</li>
+                    <li>{t("cv.experience.dba.development")}</li>
                   </ul>
                 </div>
               </div>
@@ -327,7 +333,7 @@ function App() {
           <div className="container">
 
             <div className="section-title">
-              <h2>Proyectos</h2>
+              <h2>{t("projects.title")}</h2>
             </div>
 
             <div className="row">
@@ -338,9 +344,14 @@ function App() {
                 <p className="related">
                   <em>Gone Mad Studios</em>
                   <br/>
-                  <i class="bi bi-android2"></i>
+                  <i className="bi bi-android2"></i>
                 </p>
-                <p className="description">Desarrollo y diseño del videojuego Hatventure para móviles Android.<br/>Autopublicación en Google Play Store.</p>
+                <p className="description">
+                  <Trans
+                      i18nKey="projects.hatventure.abstract"
+                      components={{ break: <br /> }}
+                    />
+                </p>
               </div>
 
               <div className="col-lg-6 col-md-12 icon-box">
@@ -349,9 +360,14 @@ function App() {
                 <p className="related">
                   <em>Gone Mad Studios</em>
                   <br/>
-                  <i class="bi bi-pc-display"></i>
+                  <i className="bi bi-pc-display"></i>
                 </p>
-                <p className="description">Desarrollo y diseño del videojuego Hirilun.<br/>Programación de Gameplay, custom shaders, efecto de outline y mejora de las sombras basado en el paper: Revectorization-Based Shadow Mapping.<br/> Integración con las tiendas de Steam, Epic Games y GOG.</p>
+                <p className="description">
+                  <Trans
+                      i18nKey="projects.hirilun.abstract"
+                      components={{ break: <br /> }}
+                    />
+                </p>
               </div>
 
               <div className="col-lg-6 col-md-12 icon-box">
@@ -360,11 +376,16 @@ function App() {
                 <p className="related">
                   <em>Brave Zebra</em>
                   <br/>
-                  <i class="bi bi-nintendo-switch"></i>
-                  <i class="bi bi-playstation"></i>
-                  <i class="bi bi-xbox"></i>
+                  <i className="bi bi-nintendo-switch"></i>
+                  <i className="bi bi-playstation"></i>
+                  <i className="bi bi-xbox"></i>
                 </p>
-                <p className="description">Lead programmer de Porting: Nintendo Switch, Xbox One y Series, PlayStation 4 y 5. <br/> Integración del control con Gamepad, optimización de rendimiento para consolas y plataformas móviles.</p>
+                <p className="description">
+                  <Trans
+                      i18nKey="projects.soti.abstract"
+                      components={{ break: <br /> }}
+                    />
+                </p>
               </div>
 
               <div className="col-lg-6 col-md-12 icon-box">
@@ -373,10 +394,12 @@ function App() {
                 <p className="related">
                   <em>Gone Mad Studios</em>
                   <br/>
-                  <i class="bi bi-pc-display"></i>
-                  <i class="bi bi-nintendo-switch"></i>
+                  <i className="bi bi-pc-display"></i>
+                  <i className="bi bi-nintendo-switch"></i>
                 </p>
-                <p className="description">Programador Auxiliar: Pulido del juego y bug-fixing en la parte final del desarrollo y en el port a Nintendo Switch.</p>
+                <p className="description">{t("projects.alexkidd.abstract")}</p>
+
+                </p>
               </div>
 
               <div className="col-lg-6 col-md-12 icon-box">
@@ -385,11 +408,16 @@ function App() {
                 <p className="related">
                   <em>Brave Zebra</em>
                   <br/>
-                  <i class="bi bi-nintendo-switch"></i>
-                  <i class="bi bi-playstation"></i>
-                  <i class="bi bi-xbox"></i>
+                  <i className="bi bi-nintendo-switch"></i>
+                  <i className="bi bi-playstation"></i>
+                  <i className="bi bi-xbox"></i>
                 </p>
-                <p className="description">Programador de Porting: Nintendo Switch, Xbox One y Series, PlayStation 4 y 5. <br/> Integración del control con Gamepad y optimización en Nintendo Switch.</p>
+                <p className="description">
+                  <Trans
+                      i18nKey="projects.doors.abstract"
+                      components={{ break: <br /> }}
+                    />
+                </p>
               </div>
 
               <div className="col-lg-6 col-md-12 icon-box">
@@ -398,11 +426,11 @@ function App() {
                 <p className="related">
                   <em>Brave Zebra</em>
                   <br/>
-                  <i class="bi bi-nintendo-switch"></i>
-                  <i class="bi bi-playstation"></i>
-                  <i class="bi bi-xbox"></i>
+                  <i className="bi bi-nintendo-switch"></i>
+                  <i className="bi bi-playstation"></i>
+                  <i className="bi bi-xbox"></i>
                 </p>
-                <p className="description">Programador Auxiliar de Porting: Integración de requerimientos de Xbox (GDK).</p>
+                <p className="description">{t("projects.nightmarereaper.abstract")}</p>
               </div>
 
               <div className="col-lg-6 col-md-12 icon-box">
@@ -411,10 +439,10 @@ function App() {
                 <p className="related">
                   <em>Gone Mad Studios</em>
                   <br/>
-                  <i class="bi bi-nintendo-switch"></i>
-                  <i class="bi bi-xbox"></i>
+                  <i className="bi bi-nintendo-switch"></i>
+                  <i className="bi bi-xbox"></i>
                 </p>
-                <p className="description">Programador de Porting: Nintendo Switch, Xbox One y Series.</p>
+                <p className="description">{t("projects.wca.abstract")}</p>
               </div>
 
               <div className="col-lg-6 col-md-12 icon-box">
@@ -423,10 +451,10 @@ function App() {
                 <p className="related">
                   <em>Gone Mad Studios</em>
                   <br/>
-                  <i class="bi bi-nintendo-switch"></i>
-                  <i class="bi bi-xbox"></i>
+                  <i className="bi bi-nintendo-switch"></i>
+                  <i className="bi bi-xbox"></i>
                 </p>
-                <p className="description">Programador de Porting: Nintendo Switch, Xbox One y Series, Microsoft Store.</p>
+                <p className="description">{t("projects.freddyfarmer.abstract")}</p>
               </div>
 
               <div className="col-lg-6 col-md-12 icon-box">
@@ -435,15 +463,15 @@ function App() {
                 <p className="related">
                   <em>Gone Mad Studios</em>
                   <br/>
-                  <i class="bi bi-nintendo-switch"></i>
-                  <i class="bi bi-xbox"></i>
+                  <i className="bi bi-nintendo-switch"></i>
+                  <i className="bi bi-xbox"></i>
                 </p>
-                <p className="description">Programador de Porting: Nintendo Switch, Xbox One y Series, Microsoft Store.</p>
+                <p className="description">{t("projects.galacticon.abstract")}</p>
               </div>
 
             </div>
 
-            <h4 className="mt-4 mb-4">Porting a Nintendo Switch:</h4>
+            <h4 className="mt-4 mb-4">{t("projects.switch")}:</h4>
 
             <div className="row">
 
@@ -453,7 +481,7 @@ function App() {
                 <p className="related">
                   <em>Gone Mad Studios</em>
                   <br/>
-                  <i class="bi bi-nintendo-switch"></i>
+                  <i className="bi bi-nintendo-switch"></i>
                 </p>
               </div>
 
@@ -463,7 +491,7 @@ function App() {
                 <p className="related">
                   <em>Gone Mad Studios</em>
                   <br/>
-                  <i class="bi bi-nintendo-switch"></i>
+                  <i className="bi bi-nintendo-switch"></i>
                 </p>
               </div>
 
@@ -473,7 +501,7 @@ function App() {
                 <p className="related">
                   <em>Gone Mad Studios</em>
                   <br/>
-                  <i class="bi bi-nintendo-switch"></i>
+                  <i className="bi bi-nintendo-switch"></i>
                 </p>
               </div>
 
@@ -483,7 +511,7 @@ function App() {
                 <p className="related">
                   <em>Gone Mad Studios</em>
                   <br/>
-                  <i class="bi bi-nintendo-switch"></i>
+                  <i className="bi bi-nintendo-switch"></i>
                 </p>
               </div>
 
@@ -493,7 +521,7 @@ function App() {
                 <p className="related">
                   <em>Gone Mad Studios</em>
                   <br/>
-                  <i class="bi bi-nintendo-switch"></i>
+                  <i className="bi bi-nintendo-switch"></i>
                 </p>
               </div>
 
@@ -503,7 +531,7 @@ function App() {
                 <p className="related">
                   <em>Gone Mad Studios</em>
                   <br/>
-                  <i class="bi bi-nintendo-switch"></i>
+                  <i className="bi bi-nintendo-switch"></i>
                 </p>
               </div>
 
@@ -513,7 +541,7 @@ function App() {
                 <p className="related">
                   <em>Gone Mad Studios</em>
                   <br/>
-                  <i class="bi bi-nintendo-switch"></i>
+                  <i className="bi bi-nintendo-switch"></i>
                 </p>
               </div>
 
@@ -523,7 +551,7 @@ function App() {
                 <p className="related">
                   <em>Brave Zebra</em>
                   <br/>
-                  <i class="bi bi-nintendo-switch"></i>
+                  <i className="bi bi-nintendo-switch"></i>
                 </p>
               </div>
 
@@ -533,7 +561,7 @@ function App() {
                 <p className="related">
                   <em>Brave Zebra</em>
                   <br/>
-                  <i class="bi bi-nintendo-switch"></i>
+                  <i className="bi bi-nintendo-switch"></i>
                 </p>
               </div>
 
@@ -543,7 +571,7 @@ function App() {
                 <p className="related">
                   <em>Brave Zebra</em>
                   <br/>
-                  <i class="bi bi-nintendo-switch"></i>
+                  <i className="bi bi-nintendo-switch"></i>
                 </p>
               </div>
 
@@ -553,33 +581,33 @@ function App() {
                 <p className="related">
                   <em>Brave Zebra</em>
                   <br/>
-                  <i class="bi bi-nintendo-switch"></i>
+                  <i className="bi bi-nintendo-switch"></i>
                 </p>
               </div>
 
             </div>
 
 
-            <h4 className="mt-4 mb-4">Proyectos Open Source:</h4>
+            <h4 className="mt-4 mb-4">{t("projects.openSource.title")}:</h4>
 
             <div className="row">
 
               <div className="col-lg-6 col-md-12 icon-box">
                 <div className="icon me-3"><a href="https://github.com/AGM-GR/UnityURP.Outline" target="_blank" rel="noopener noreferrer"><i className="bi bi-github"></i></a></div>
                 <h4 className="title"><a href="https://github.com/AGM-GR/UnityURP.Outline" target="_blank" rel="noopener noreferrer">UnityURP.Outline</a></h4>
-                <p className="description">Efecto de Outline por objeto creado para Unity 6 con Universal Render Pipeline.</p>
+                <p className="description">{t("projects.openSource.urpOutline")}</p>
               </div>
 
               <div className="col-lg-6 col-md-12 icon-box">
                 <div className="icon me-3"><a href="https://github.com/AGM-GR/EdgeDetection" target="_blank" rel="noopener noreferrer"><i className="bi bi-github"></i></a></div>
                 <h4 className="title"><a href="https://github.com/AGM-GR/EdgeDetection" target="_blank" rel="noopener noreferrer">Edge Detection</a></h4>
-                <p className="description">Adaptación del efecto de Unity: "Edge Detect Normals" a Post Processing Stack v2, añadiendo nuevas características y mejoras.</p>
+                <p className="description">{t("projects.openSource.edgeDetection")}</p>
               </div>
 
               <div className="col-lg-6 col-md-12 icon-box">
                 <div className="icon me-3"><a href="https://github.com/AGM-GR/In-Game" target="_blank" rel="noopener noreferrer"><i className="bi bi-github"></i></a></div>
                 <h4 className="title"><a href="https://github.com/AGM-GR/In-Game" target="_blank" rel="noopener noreferrer">In-Game</a></h4>
-                <p className="description">Projecto fin de master. Videjuego escape room para VR (Microsoft Mixed Reality) creado en Unity.</p>
+                <p className="description">{t("projects.openSource.ingame")}.</p>
               </div>
 
             </div>
@@ -593,28 +621,28 @@ function App() {
                 <div className="icon-horizontal me-3"><img className="img-fluid" loading="lazy" src="https://img.itch.zone/aW1nLzI5NTUyMjcucG5n/315x250%23c/rRYiiS.png"/></div>
                 <h4 className="title"><a href="https://gonemadstudios.itch.io/hammertime" target="_blank" rel="noopener noreferrer">HammerTime!</a></h4>
                 <p className="related"><em>Global Game Jam 2020</em></p>
-                <p className="description">Programación.</p>
+                <p className="description">{t("projects.gamejams.rol")}.</p>
               </div>
 
               <div className="col-lg-6 col-md-12 icon-box">
                 <div className="icon-horizontal me-3"><img className="img-fluid" loading="lazy" src="https://img.itch.zone/aW1nLzExMjczMDE1LnBuZw==/315x250%23c/Ar%2B3Xt.png"/></div>
                 <h4 className="title"><a href="https://kikoalfaro.itch.io/la-root-del-bakalao" target="_blank" rel="noopener noreferrer">La Root del Bakalao</a></h4>
                 <p className="related"><em>Global Game Jam 2023</em></p>
-                <p className="description">Programación.</p>
+                <p className="description">{t("projects.gamejams.rol")}.</p>
               </div>
 
               <div className="col-lg-6 col-md-12 icon-box">
                 <div className="icon-horizontal me-3"><img className="img-fluid" loading="lazy" src="https://img.itch.zone/aW1nLzE4OTU3Mjg1LmdpZg==/315x250%23cm/n1WTtq.gif"/></div>
                 <h4 className="title"><a href="https://kikoalfaro.itch.io/smile-brothers" target="_blank" rel="noopener noreferrer">Smile Brothers</a></h4>
                 <p className="related"><em>Global Game Jam 2024</em></p>
-                <p className="description">Programación.</p>
+                <p className="description">{t("projects.gamejams.rol")}.</p>
               </div>
 
               <div className="col-lg-6 col-md-12 icon-box">
                 <div className="icon-horizontal me-3"><img className="img-fluid" loading="lazy" src="https://img.itch.zone/aW1nLzE5NTQ1MTIxLnBuZw==/315x250%23c/ATkdpZ.png"/></div>
                 <h4 className="title"><a href="https://agm-cp.itch.io/globubble-jam-2k25" target="_blank" rel="noopener noreferrer">Globubble Jam 2k25</a></h4>
                 <p className="related"><em>Global Game Jam 2025</em></p>
-                <p className="description">Programación.</p>
+                <p className="description">{t("projects.gamejams.rol")}.</p>
               </div>
 
             </div>

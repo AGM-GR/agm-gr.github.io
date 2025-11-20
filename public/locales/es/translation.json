@@ -1,0 +1,170 @@
+{
+  "home":
+  {
+    "title": "Inicio",
+    "occupation": "Programador de Videojuegos"
+  },
+
+
+  "about":
+  {
+    "title": "Sobre mí",
+    "abstract": "<italic>Ingeniero informático</italic>. Entusiasta de la tecnología, la computación y los videojuegos desde siempre.<break/>Llevo trabajando como <italic>Desarrollador de Videojuegos</italic> indie desde 2019.",
+    "occupation": "Programador - Senior Unity Developer",
+
+    "age":
+    {
+      "label": "Edad"
+    },
+    "city":
+    {
+      "label": "Ciudad",
+      "content": "Valencia, Valencia, España"
+    },
+    "qualification":
+    {
+      "label": "Estudios",
+      "content": "Master en Ingeniería Informática"
+    },
+    "languages":
+    {
+      "label": "Idiomas",
+      "content": "Español / Inglés"
+    },
+    "currently":
+    {
+      "label": "Actualmente",
+      "content": "Desarrollador en"
+    },
+
+    "knowledge":
+    {
+      "advanced":
+      {
+        "label": "Conocimientos Avanzados"
+      },
+      "high":
+      {
+        "label": "Conocimientos Altos"
+      },
+      "base":
+      {
+        "label": "Conocimientos Básicos",
+        "modeling": "Modelado (Blender/3ds max)",
+        "images": "Edición de imágenes (Gimp)",
+        "native": "Android Nativo",
+        "server": "Gestión servidores"
+      }
+    }
+  },
+
+
+  "cv":
+  {
+    "title": "Currículum",
+    "current": "actualidad",
+    "qualification":
+    {
+      "title": "Educación",
+      "master":
+      {
+        "title": "Master en Ingeniería Informática",
+        "location": "Universidad de Granada",
+        "abstract": "Master profesionalizante de Ingeniería Informática, en el que se adquieren conocimientos de distintas ramas de la informática (UI/UX, Programación web/mobil, Análisis de datos, Big Data, Sistemas en red, Creación y aprovisionamiento de servicios ...) así como diseño del software y metodologías de trabajo."
+      },
+      "degree":
+      {
+        "title": "Grado en Ingeniería Informática",
+        "location": "Universidad de Granada",
+        "abstract": "Durante mis estudios de grado decidí enfocar mis optativas al desarrollo de videojuegos y aprendí de forma autodidáctica sobre Unity 3D."
+      }
+    },
+    "experience":
+    {
+      "title": "Experiencia Profesional",
+      "bravezebra":
+      {
+        "title": "Programador de Videojuegos",
+        "location": "Valencia",
+        "porting": "Porting de videojuegos a Nintendo Switch, Xbox One, Xbox Series, PlayStation 4 y PlayStation 5.",
+        "development": "Desarrollo de prototipos y vertical slices del propio estudio."
+      },
+      "gonemad":
+      {
+        "title": "Programador de Videojuegos",
+        "location": "Valencia",
+        "abstract": "Socio fundador de la empresa Gone Mad Studios, como cooperativa de trabajo asociado.<break/>Gone Mad ofrecía trabajos de outsourcing y desarrollo a medida a la par que desarrollábamos videojuegos propios.",
+        "development": "Desarrollo a medida de videjuegos para proyectos de gamificación.",
+        "web": "Desarrollo web PHP y node.",
+        "porting": "Servicio de Porting de videjuegos a Nintendo Switch.",
+        "projects": "Diseño y desarrollo de los videojuegos: Hatventure y Hirilun."
+      },
+      "dba":
+      {
+        "title": "Programador de aplicaciones Web",
+        "location": "Granada",
+        "abstract": "Prácticas del Máster de Ingeniería Informática:",
+        "services": "Programador full stack, desarrollando soluciones con Node, AngularJS y MySQL para su sistema web.",
+        "development": "Prototipo de aplicación web (React) y Android nativo, para hacer seguimiento de datos de estaciones de sonido."
+      }
+    }
+  },
+
+  "projects":
+  {
+    "title": "Proyectos",
+    "hatventure":
+    {
+      "abstract": "Desarrollo y diseño del videojuego Hatventure para móviles Android.<break/>Autopublicación en Google Play Store."
+    },
+    "hirilun":
+    {
+      "abstract": "Desarrollo y diseño del videojuego Hirilun.<break/>Programación de Gameplay, custom shaders, efecto de outline y mejora de las sombras basado en el paper: Revectorization-Based Shadow Mapping.<break/> Integración con las tiendas de Steam, Epic Games y GOG."
+    },
+    "soti":
+    {
+      "abstract": "Lead programmer de Porting: Nintendo Switch, Xbox One y Series, PlayStation 4 y 5. <break/> Integración del control con Gamepad, optimización de rendimiento para consolas y plataformas móviles."
+    },
+    "alexkidd":
+    {
+      "abstract": "Programador Auxiliar: Pulido del juego y bug-fixing en la parte final del desarrollo y en el port a Nintendo Switch."
+    },
+    "rueValley":
+    {
+      "abstract": "Programador de Porting: Nintendo Switch, Xbox One y Series, PlayStation 4 y 5. <break/> Adaptación de Shaders y Optimización en Nintendo Switch."
+    },
+    "doors":
+    {
+      "abstract": "Programador de Porting: Nintendo Switch, Xbox One y Series, PlayStation 4 y 5. <break/> Integración del control con Gamepad y optimización en Nintendo Switch."
+    },
+    "nightmarereaper":
+    {
+      "abstract": "Programador Auxiliar de Porting: Integración de requerimientos de Xbox (GDK)."
+    },
+    "wca":
+    {
+      "abstract": "Programador de Porting: Nintendo Switch, Xbox One y Series."
+    },
+    "freddyfarmer":
+    {
+      "abstract": "Programador de Porting: Nintendo Switch, Xbox One y Series, Microsoft Store."
+    },
+    "galacticon":
+    {
+      "abstract": "Programador de Porting: Nintendo Switch, Xbox One y Series, Microsoft Store."
+    },
+    "switch": "Porting a Nintendo Switch",
+    "openSource":
+    {
+      "title": "Proyectos Open Source",
+      "urpOutline": "Efecto de Outline por objeto creado para Unity 6 con Universal Render Pipeline.",
+      "edgeDetection": "Adaptación del efecto de Unity: \"Edge Detect Normals\" a Post Processing Stack v2, añadiendo nuevas características y mejoras.",
+      "ingame": "Projecto fin de master. Videjuego escape room para VR (Microsoft Mixed Reality) creado en Unity."
+    },
+    "gamejams":
+    {
+      "rol": "Programación"
+    }
+  }
+
+}

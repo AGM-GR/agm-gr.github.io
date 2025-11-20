@@ -1,0 +1,19 @@
+.locale-switcher {
+  padding: 15px;
+}
+
+.locale-switcher i {
+  font-size: 24px;
+  padding-right: 8px;
+  color: #12CFBD;
+}
+
+.locale-switcher .dropdown-menu-dark {
+  --bs-dropdown-bg: #2F313C;
+}
+
+.locale-switcher .dropdown-item.active {
+  text-decoration: underline;
+  text-decoration-color: #12CFBD;
+  background-color: transparent;
+}

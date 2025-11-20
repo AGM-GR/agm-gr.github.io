@@ -1,8 +1,13 @@
 import { useState } from 'react';
-import './Header.css'
+import { useTranslation } from "react-i18next";
+
+import './Header.css';
+
+import LocaleSwitcher from '../Localization/LocaleSwitcher.jsx';
 
 export default function Header({sectionsList, currentSection}) {
   const [showHeader, setShowHeader] = useState(false);
+  const { t } = useTranslation();
 
   function toggleHeader() {
     setShowHeader(!showHeader);
@@ -37,12 +42,16 @@ export default function Header({sectionsList, currentSection}) {
               <li key={index}>
                 <a href={'#'+section.id} className={"nav-link scrollto " + (index == currentSection ? "active" : "")}>
                   <i className={section.icon}></i>
-                  <span>{section.name}</span>
+                  <span>{t(section.key)}</span>
                 </a>
               </li>
             ))}
           </ul>
         </nav>
+      </div>
+
+      <div className="d-flex locale">
+        <LocaleSwitcher />
       </div>
     </header>
     </>
