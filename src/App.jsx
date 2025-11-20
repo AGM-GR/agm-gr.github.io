@@ -398,7 +398,23 @@ function App() {
                   <i className="bi bi-nintendo-switch"></i>
                 </p>
                 <p className="description">{t("projects.alexkidd.abstract")}</p>
+              </div>
 
+              <div className="col-lg-6 col-md-12 icon-box">
+                <div className="icon-hero me-3"><img className="img-fluid" loading="lazy" src="https://cdn.cloudflare.steamstatic.com/steam/apps/2126190/hero_capsule.jpg"/></div>
+                <h4 className="title"><a href="https://store.steampowered.com/app/2126190/Rue_Valley/" target="_blank" rel="noopener noreferrer">Rue Valley</a></h4>
+                <p className="related">
+                  <em>Brave Zebra</em>
+                  <br/>
+                  <i className="bi bi-nintendo-switch"></i>
+                  <i className="bi bi-playstation"></i>
+                  <i className="bi bi-xbox"></i>
+                </p>
+                <p className="description">
+                  <Trans
+                      i18nKey="projects.rueValley.abstract"
+                      components={{ break: <br /> }}
+                    />
                 </p>
               </div>
 
